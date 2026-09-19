@@ -41,7 +41,7 @@ body {
     background-size: 4px 4px;
 }
 
-.sumario {
+.links {
     opacity: 0;
 }
 
@@ -307,7 +307,8 @@ main {
 
 /* Efeito de Papel Envelhecido (Documento Antigo) para Painel Lateral */
 
-.painelLateral, header {
+.painelLateral,
+header {
     isolation: isolate;
 }
 
@@ -361,7 +362,12 @@ main {
         0 5px 20px rgba(0, 0, 0, 0.35);
 }
 
-.conteudo h1, h2, h3, h4, h5, h6 {
+.conteudo h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #303435;
     font-family: 'Oldenburg';
 }
@@ -442,16 +448,67 @@ main {
         display: flex;
     }
 
-    details {
-        border: 1px solid black;
-        opacity: 1;
-        z-index: 9;
-    }
-
     header {
         height: 8vh;
         left: 0;
         width: 100vw;
+    }
+
+    .links {
+        opacity: 1;
+        z-index: 1;
+
+        position: fixed;
+        top: 8vh;
+        width: 100vw;
+        height: fit-content;
+
+        background:
+            linear-gradient(to bottom,
+                #f0f1f1,
+                #9fa5a8);
+
+        display: flex;
+        gap: 0 3vw;
+        padding: 2vw 1.2vw 1vh 12.4vh;
+        border-radius: 0 0 0 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+
+    .links a {
+        display: block;
+        padding: 0.5vh 1vw;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        text-decoration: none;
+        color: #17191a;
+    }
+
+    .registro {
+        z-index: 3;
+
+        display: block;
+        background-color: #bcc3c9;
+        padding: 0.6vh 4vw 0.2vh 8vw;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+        border-radius: 0 0 12px 0;
+
+        position: fixed;
+        top: 8vh;
+        left: 0;
+
+        font-family: 'Winky Rough';
+        font-size: 12px;
+        font-weight: bold;
+        color: #49272b;
+
+
+
     }
 
     .icone {
@@ -461,25 +518,25 @@ main {
 
     .pagina {
         position: absolute;
-        top: 8vh;
+        top: 9vh;
         left: 0vw;
         width: 100vw;
     }
 
     .conteudo {
-        margin: 4vh 4vw 6vh 4vw;
+        margin: 6vh 6vw 0 6vw;
     }
 
     .conteudo * {
-        font-size: 14px;
+        font-size: 20px;
     }
 
     .conteudo h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .cabecalhoTexto {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .painelLateral {
@@ -505,68 +562,31 @@ main {
         font-size: 12px;
         top: -1vh;
     }
-}
 
-@media (width<=440px) {
-    main {
-        position: relative;
-        margin: 0;
-        display: flex;
+    .tableContainer {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        max-width: 96vw;
+        overflow-x: auto;
+        height: fit-content;
+
+        margin-bottom: 6vh;
     }
 
-    header {
-        height: 8vh;
-        left: 0;
-        width: 100vw;
+    .tableContainer th {
+        border-collapse: collapse;
+        padding: 0 4vw;
     }
 
-    .icone {
-        top: 1vh;
-        height: 6vh;
+    .tableContainer td {
+        border-collapse: collapse;
+        padding: 0 4vw;
     }
 
-    .pagina {
-        position: absolute;
-        padding: 0 6vw 5vh 6vw;
-        top: 8vh;
-        left: 0vw;
-        width: 100vw;
+    .tableContainer img {
+        transform: scale(5);
     }
 
-    .conteudo * {
-        font-size: 14px;
-    }
-
-    .conteudo h1 {
-        font-size: 24px;
-    }
-
-    .cabecalhoTexto {
-        font-size: 12px;
-    }
-
-    .painelLateral {
-        opacity: 0;
-        position: fixed;
-        width: 18vw;
-        height: 92vh;
-        top: 8vh;
-        left: 0;
-    }
-
-    .gridOrganizacoes {
-        grid-template-columns: repeat(3, 24vw);
-        column-gap: 4vw;
-        row-gap: 2vh;
-    }
-
-    .gridItem {
-        width: inherit;
-    }
-
-
-    .gridItem h2 {
-        font-size: 12px;
-        top: -1vh;
+    .columnTitle {
+        min-width: 40vw;
     }
 }
