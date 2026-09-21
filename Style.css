@@ -439,7 +439,21 @@ h6 {
 
 .tabelaIgrejas img {
     width: 5vw;
+
+    transition: 
+        transform 0.6s ease,
+        box-shadow 0.6s ease,
+        border-radius 0.6s ease,
+        background-color 0.6s ease;
 }
+
+.tabelaIgrejas img:hover{
+    transform: scale(2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
+    background-color: #d8d3c8ad;
+}
+
 
 @media (width<=1032px) {
     main {
@@ -583,10 +597,16 @@ h6 {
     }
 
     .tableContainer img {
-        transform: scale(5);
+        transform: scale(2);
     }
 
     .columnTitle {
         min-width: 40vw;
+    }
+}
+
+@media (width<=440px) {
+    .tableContainer img {
+        transform: scale(5);
     }
 }
