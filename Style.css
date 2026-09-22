@@ -426,6 +426,7 @@ h6 {
     font-size: 14px;
 }
 
+
 .tabelaIgrejas {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
     border: solid 1px rgba(0, 0, 0, 0.250);
@@ -441,7 +442,7 @@ h6 {
 .tabelaIgrejas img {
     width: 5vw;
 
-    transition: 
+    transition:
         transform 0.6s ease,
         box-shadow 0.6s ease,
         border-radius 0.6s ease,
@@ -451,11 +452,11 @@ h6 {
         background-color 0.6s ease;
 }
 
-.tabelaIgrejas img:hover{
+.tabelaIgrejas img:hover {
     transform: scale(2);
     box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.35);
     border-radius: 12px;
-    border-width: 1px; 
+    border-width: 1px;
     border-style: solid;
     border-color: #ada9a0ad;
     background-color: #d8d3c8ad;
@@ -593,6 +594,11 @@ h6 {
         margin-bottom: 6vh;
     }
 
+
+    .tabelaIgrejas tr {
+        height: 20vh;
+    }
+
     .tableContainer th {
         border-collapse: collapse;
         padding: 0 4vw;
@@ -609,6 +615,11 @@ h6 {
 
     .columnTitle {
         min-width: 40vw;
+    }
+
+    .tabelaIgrejas img:hover {
+        transform: scale(9);
+        border-radius: 3px;
     }
 }
 
