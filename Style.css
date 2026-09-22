@@ -334,7 +334,7 @@ header {
 
 .conteudo {
     position: relative;
-    margin: 4vh 4vw 6vh 4vw;
+    margin: 4vh 4vw 0vh 4vw;
 
     display: flex;
     flex-direction: column;
@@ -354,6 +354,7 @@ header {
 
     top: 10vh;
     left: 20vw;
+    padding-bottom: 6vh;
 
     width: 65vw;
 
@@ -395,7 +396,7 @@ h6 {
 }
 
 .gridOrganizacoes {
-    margin: 0vh 4vw 4vh 4vw;
+    margin: 0vh 4vw 0vh 4vw;
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 18vw);
@@ -444,13 +445,19 @@ h6 {
         transform 0.6s ease,
         box-shadow 0.6s ease,
         border-radius 0.6s ease,
+        border-color 0.6s ease,
+        border-style 0.6s ease,
+        border-width 0.6s ease,
         background-color 0.6s ease;
 }
 
 .tabelaIgrejas img:hover{
     transform: scale(2);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.35);
     border-radius: 12px;
+    border-width: 1px; 
+    border-style: solid;
+    border-color: #ada9a0ad;
     background-color: #d8d3c8ad;
 }
 
