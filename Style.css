@@ -433,6 +433,19 @@ h6 {
     background-color: #e2dccc93;
 }
 
+.tabelaIgrejas table, th, td {
+    border: 1px solid #00000034;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 0 0.5vw;
+}
+
 .tabelaIgrejas td {
     font-weight: 700;
     font-size: 14px;
@@ -460,6 +473,10 @@ h6 {
     border-style: solid;
     border-color: #ada9a0ad;
     background-color: #d8d3c8ad;
+}
+
+.tabelaIgrejas tr {
+    height: 12vh;
 }
 
 
